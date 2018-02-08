@@ -28,6 +28,10 @@ const Question = new Schema({
         type: String,
         required: true
     },
+    category: {
+        type: String,
+        required: true
+    },
     created_date: {
         type: Date,
         default: Date.now
