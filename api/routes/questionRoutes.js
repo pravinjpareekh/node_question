@@ -18,6 +18,9 @@ module.exports = (app, passport) => {
     protectedRouter.route('/questions/category')
     .get(questionController.getQuestionsCategory)
 
+    protectedRouter.route('/answer')
+    .post(questionController.calculateAnswer)
+
     app.use('/api', unprotectedRouter);
     app.use('/api', passport.authenticate('jwt', { session: false }), protectedRouter);
 

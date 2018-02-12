@@ -14,7 +14,7 @@ exports.registerUser = (req, res) => {
         if (err) {
             res.json({ status: 'error' });
         }
-        res.json(userInfo);
+        res.json({ status: 'success', info: userInfo});
     });
 }
 
@@ -35,5 +35,5 @@ exports.authenticateUser = (req, res) => {
                 }
             }
         }
-    });
+    }).select("+password");
 }

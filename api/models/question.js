@@ -26,7 +26,8 @@ const Question = new Schema({
     },
     answer: {
         type: String,
-        required: true
+        required: true,
+        select: false
     },
     category: {
         type: String,

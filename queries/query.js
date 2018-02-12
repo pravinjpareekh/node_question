@@ -1,0 +1,1 @@
+db.getCollection('questions').find({$or:[{ "_id" : ObjectId("5a7c7ceb3b0e3402831b7e59"),"answer" : "optionA"},{ "_id" : ObjectId("5a7c7e266fba3902ea85f00a"),"answer" : "optionC"}]})
